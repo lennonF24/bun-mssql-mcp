@@ -1,0 +1,29 @@
+{
+  "name": "bun-mssql-mcp",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "bun-mcp-sql-server": "build/index.js"
+  },
+  "scripts": {
+    "dev": "bun run --watch ./src/index.ts",
+    "build": "bun build ./src/index.ts --outdir ./build --minify --target node"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/mssql": "9.1.9",
+    "prisma": "7.2.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.25.2",
+    "@prisma/adapter-mssql": "7.2.0",
+    "@prisma/client": "7.2.0",
+    "@types/node": "25.0.9",
+    "dotenv": "17.2.3",
+    "zod": "4.3.5"
+  }
+}
